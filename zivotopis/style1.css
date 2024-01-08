@@ -9,6 +9,7 @@ body {
   background-color: var(--my-beckground);
   max-width: 1200px;
   margin: auto;
+  margin-bottom: 25px;
 }
 footer {
   position: fixed;

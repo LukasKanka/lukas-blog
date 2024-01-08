@@ -1,6 +1,8 @@
 :root {
   --my-black: black;
   --my-beckground: #ded4d4;
+  max-width: 1200px;
+  margin: auto;
 }
 
 body {

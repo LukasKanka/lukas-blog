@@ -1,3 +1,8 @@
+:root {
+  --my-brown: brown;
+  --my-red: red;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -26,6 +31,8 @@ footer {
 body {
   background-image: url(obrazky/white-21.jpg);
   background-size: 100%;
+  max-width: 1200px;
+  margin: auto;
   /* obrázek na pozadí */
   /*background-attachment: fixed;*/
   /* pozadí neroluje */
@@ -47,18 +54,18 @@ a.tlacitko {
 
 a.tlacitko:link {
   text-decoration: none;
-  color: brown;
+  color: var(--my-brown);
 }
 
 a.tlacitko:visited {
   text-decoration: none;
-  color: red;
+  color: var(--my-red);
 }
 
 a.tlacitko:hover {
   text-decoration: none;
   /*border-bottom : 1px solid orange;*/
-  color: brown;
+  color: var(--my-brown);
 }
 /* </style> */
 .dot {

@@ -1,0 +1,13 @@
+.tlacitko {
+  color: #ca0808;
+  font-family: fantasy;
+}
+
+body {
+  background-color: rgb(180, 138, 220);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleTest.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Span -> Inline element - neutrální řádkový element</h2>
+    <span style="border: 3px solid red">Test1</span
+    ><span style="border: 3px solid red">Test2</span
+    ><span style="border: 3px solid red">Test3</span>
+    <h2>Div -> neutrální blokový element</h2>
+    <div>
+      <div style="width: 150px; height: 150px">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut atque nam
+        non vero, possimus voluptas explicabo. Iusto non tempore commodi tenetur
+      </div>
+
+      <div style="width: 200px; height: 200px">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quae
+        natus esse consequatur quaerat ducimus earum eaque corporis cumque animi
+        ipsum minima deleniti, possimus cum impedit blanditiis,
+      </div>
+    </div>
+    <h2>Inline elementy</h2>
+    <p>
+      <strong>Město Brno</strong> je počtem obyvatel i rozlohou
+      <em>druhé největší</em> město v České republice,
+      <em>největší město</em> na Moravě a <em>bývalé hlavní město</em> Moravy.
+    </p>
+    <h2>Použití Inline blocky</h2>
+    <ul>
+      <li style="border: 1px solid red">Item 1</li>
+      <li style="display: inline-block; border: 1px solid red">Item 2</li>
+      <li style="display: inline-block; border: 1px solid red">Item 3</li>
+    </ul>
+    <ul>
+      <li style="display: inline-block; border: 1px solid red">Item 1</li>
+      <li style="display: inline-block; border: 1px solid red">Item 2</li>
+      <li style="display: inline-block; border: 1px solid red">Item 3</li>
+    </ul>
+    <ul>
+      <li
+        style="
+          display: inline-block;
+          width: 100px;
+          height: 50px;
+          border: 1px solid red;
+        "
+      >
+        Item 1
+      </li>
+      <li
+        style="
+          display: inline-block;
+          width: 100px;
+          height: 50px;
+          border: 1px solid red;
+        "
+      >
+        Item 2
+      </li>
+      <li
+        style="
+          display: inline-block;
+          width: 100px;
+          height: 50px;
+          border: 1px solid red;
+        "
+      >
+        Item 3
+      </li>
+    </ul>
+    <h2>Tlačtko -> odkaz</h2>
+    <a
+      href="https://lukan.cz/"
+      target="_blank"
+      style="border: 1px solid royalblue"
+      >Odkaz</a
+    >
+    <a
+      href="https://lukan.cz/"
+      target="_blank"
+      style="
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        border: 1px solid red;
+      "
+      >Odkaz</a
+    >
+    <div>
+      <div>
+        <h1>Article Title</h1>
+      </div>
+      <div>
+        <p>Introductory paragraph.</p>
+      </div>
+      <div>
+        <div>
+          <h2>Section Title</h2>
+        </div>
+        <div>
+          <p>Section content.</p>
+        </div>
+        <div>
+          <div>
+            <h3>Aside Title</h3>
+          </div>
+          <div>
+            <p>Aside content.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <h2>Another Section Title</h2>
+        </div>
+        <div>
+          <p>Another section content.</p>
+        </div>
+        <ul>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>
+            List item 3
+            <ul>
+              <li>Subitem 3.1</li>
+              <li>Subitem 3.2</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p>Copyright information.</p>
+      </div>
+    </div>
+  </body>
+</html>

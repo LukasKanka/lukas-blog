@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+    <html lang="cs-cz">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Lukáš bloguje</title>
+
+        <meta name="description" content="Blog o všem možném i nemožném...." />
+        <meta name="keywords" content="Markdown" />
+        <meta name="author" content="Kankys" />
+        <link rel="shortcut icon" href="obrazky/tux.png" />
+        <link type="text/css" rel="stylesheet" href="styly.css" />
+
+    </head>
+
+    <body>
+
+        <div id="flexbox">
+            <div id="menu">
+                <ul>
+                    <img src="obrazky/tux.png" width="150" height="100" alt="linux">
+                    <li>
+                        <strong><a href="index.html" class="tlacitko">Hlavní strana</a></strong>
+                    </li>
+                    <li><strong><a href="clanky.html" class="tlacitko">Články</a></strong></li>
+                    <li><strong><a href="o-mne.html" class="tlacitko">O mně</a></strong></li>
+                    <li><strong><a href="privaci-polici.html" class="tlacitko">Zásady ochrany osobních údaju</a></strong></li>
+
+                </ul>
+            </div>
+
+
+            <div id="obsah">
+                <strong>
+                    <figure>
+
+                        <center>
+                            <figcaption>
+                                <h1>Lukáš Bloguje</h1><br>Blog o všem možném i nemožném....
+                            </figcaption>
+                        </center>
+                    </figure>
+                </strong>
+
+                <p>
+                    <strong>
+                        <center>Markdown: základy část 1.</center>
+                    </strong>
+                </p>
+                <p>
+                    V tomto seriálu se podíváme na Markdown, jak sním pracovat a další triky co nám ulehčí práci.<br>
+
+                    Co je vlastně Markdown? Markdown je značkovací jazyk vytvořený spisovatelem a bloggerem Johnem Gruberem. Je navržen tak, aby vytvořil krásně navržené texty v běžných souborech formátu TXT. Nepotřebujete těžkopádné procesory jako Word nebo Pages k vytváření dokumentů s tučným písmem, kurzívou, citacemi, odkazy a dokonce i tabulkami. Stačí si zapamatovat jednoduchá pravidla programu Markdown a můžete dokonce psát v programu Poznámkový blok. Ačkoli specializované Markdown editory, budou samozřejmě, mnohem pohodlnější.</p>
+                <p>
+                    Tento seriál jsem psal v VS Code a aplikaci Joplin.<br>
+
+                    Vřele doporučuji pracovat například v VS Code kde si vytvoříte soubor „název_souboru.md“ kam můžete vložit text níže. V VS Code můžete v pravém horním rohu kliknout na Open Preview uvidíte co Markdown umí.<br>
+
+                <p>
+                    <img src="obr_clanky/markdown-vs-code.png" width="50%" alt="Markdown VS Code">
+                </p>
+
+
+                Nebo například můžete použít aplikaci Joplin kam text jen vložíte.
+                </p>
+                <p>
+                    A zde už máte samotný Markdown na zkopírování do vaše editoru:
+                </p>
+
+                <p>
+                    Ve **VSCode** používej náhled, tlačítko vpravo nahoře.<br>
+                    **Odstavec**<br>
+                    Stačí udělat prázdný řádek.<br>
+                    **Zvýraznění textu:** tučný text — > **dvě hvězdičky na začátku a konci** nebo __dvě podtržítka na začátku a konci__<br>
+                    *Zvýraznění textu:* kurzíva — > *jedna hvězdička na začátku i konci* nebo _jedno podtržítko na začátku a konci_<br>
+                    **Seznamy** — > na začátku řádku napsat hvězdičku nebo mínus * / –<br>
+                    * AAA<br>
+                    * BBB<br>
+                    * CCC<br>
+                    Vnořené seznamy stačí odsadit tabulatorem.<br>
+                    Číslované seznamy: na začátek napsat číslo a tečku, začneme jedničkou. Je jedno jaké dáváme další čísla, Markdown je vkládá od 1 postupně dál.<br>
+                    1. Jedna<br>
+                    1. Dva<br>
+                    3. Tři<br>
+                    Seznam vnořený stačí odsadit.<br>
+                    Oba seznamy se dají kombinovat<br>
+                    **Nadpisy** — > Na začátku řádku: stačí jeden nebo více hastagu.<br>
+                    # Nadpis první úrovně<br>
+                    ## Nadpis druhé úrovně<br>
+                    ### Nadpis třetí úrovně<br>
+                    #### A tak dále<br>
+                    **Citace**<br>
+                    > Citace — > pro citaci na začátek zapíšeme (větší než ) „>“ .<br>
+                    ><br>
+                    > Má-li více odstavců , musí být označený vynechaný řádek.<br>
+                    **Odkazy** — > Automaticky rozezná odkaz https://www.lukan.cz/.<br>
+                    Pokud chcete mít text jako odkaz — > vložte text do [hranatých závorek a odkaz za něj do kulatých závorek](https://www.lukan.cz/.)<br>
+                    **Obrázky** — > ![váš obrázek](obrázek.cz) v hranaté závorce je text pokud nelze zobrazit obrázek, hranatá závorka může zůstat prázdná. V kulaté je cesta k obrázku. Pokud obrázek bude ve složce kde je Markdown tak stačí pouze název obrázku a koncovka např. obrazek.png<br>
+                    **Zdrojový kód** — > uzavírá se do zpětných apostrofů `(zpětný apostrof uděláme levý alt + 96).`<br>
+                    **Zdrojový kód na více řádku** — > Použijeme tři zpětné apostrofy na samotném řádku, text není třeba odsazovat.<br>
+                    „`<br>
+                    // Ukázka Zdrojového kódu na více řádků<br>
+                    import { chromium } from „@playwright/test“;<br>
+                    (async () => {<br>
+                    const browser = await chromium.launch({ headless: false });<br>
+                    const context = await browser.newContext({<br>
+                    viewport: {width: 1920, height: 1080 } ,<br>
+                    });<br>
+                    const page = await context.newPage();<br>
+                    „`<br>
+                    **HTML**<br>
+                    * Do Markdown můžeme přímo zapisovat HTML a ten se vám zobrazí jako na webové stránce.<br>
+                    * HTML v Markdown vždy nemusí fungovat, ale mám odzkoušené že funguje v VSCode tak i v editoru Joplin.<br>
+                    **Tabulky**<br>
+                    * Svislým znakem oddělíme sloupec: | levý alt + W<br>
+                    * Mínusem uděláme tučnější čáru: —<br>
+                    Výkon | Pondělí | Úterý | Středa<br>
+                    — | — | — | —<br>
+                    Franta | 20% | 80% | 0%<br>
+                    Kolohlava | 100% | 100% | 99,7%<br>
+                    * Navíc Buňky v tabulce může zarovnávat do stran, ale o tom si více s dalšími triky povíme v dalším díle.
+                </p>
+
+
+
+                <p style="text-align: right"> By Kankys <br>
+                    Posted on 05/04/2023</p>
+                <p>
+                    <li><strong><a href="stitky-it.html" class="tlacitko">Štítky-IT</a></strong></li>
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+
+        <footer>
+            Copyright &copy; Lukáš Kaňka 2023
+
+        </footer>
+
+
+
+
+    </body>
+
+    </html>

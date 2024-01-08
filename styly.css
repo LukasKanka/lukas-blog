@@ -1,0 +1,66 @@
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+/*flebox itn*/
+.flexbox {
+  display: flex;
+  max-width: auto;
+  margin: auto;
+}
+
+.flexbox div {
+  /*    background-color: ;*/
+}
+
+.menu,
+.panel {
+  flex: 1;
+}
+
+.obsah {
+  flex: 3;
+}
+
+body {
+  background-image: url(obrazky/white-21.jpg);
+  background-size: 100%;
+  /* obrázek na pozadí */
+  /*background-attachment: fixed;*/
+  /* pozadí neroluje */
+  /*background-color: black;  /* případná barva pozadí černá */
+  /*color: white; } /* bílý text */
+}
+/* <style> */
+a.tlacitko {
+  /*border-bottom : 1px solid #D1D1D1;*/
+  background-color: transparent;
+  font-size: 10pt;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 160px;
+  padding: 0px 5px 0px 5px;
+  color: #666666;
+  margin: 0px 10px 0px 10px;
+  /* display: block; */
+}
+
+a.tlacitko:link {
+  text-decoration: none;
+  color: brown;
+}
+
+a.tlacitko:visited {
+  text-decoration: none;
+  color: red;
+}
+
+a.tlacitko:hover {
+  text-decoration: none;
+  /*border-bottom : 1px solid orange;*/
+  color: brown;
+}
+/* </style> */
+.dot {
+  list-style-type: none;
+}

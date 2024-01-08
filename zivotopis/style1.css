@@ -1,0 +1,45 @@
+:root {
+  --my-black: black;
+  --my-beckground: #ded4d4;
+}
+
+body {
+  background-color: var(--my-beckground);
+  max-width: 1200px;
+  margin: auto;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.tlacitko {
+  color: var(--my-black);
+}
+
+td,
+th {
+  border: 1px solid var(--my-black);
+  padding: 15px;
+}
+
+.flexbox {
+  display: flex;
+  max-width: auto;
+  margin: auto;
+}
+.menu {
+  flex: 1;
+}
+
+.content {
+  flex: 3;
+}
+.dot {
+  list-style-type: none;
+}
+.jobs,
+.course,
+.fun {
+  font-size: 20px;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="cs-cz">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Lukáš bloguje</title>
+
+    <meta name="description" content="Blog o všem možném i nemožném...." />
+    <meta name="keywords" content="MSSQL, Docker" />
+    <meta name="author" content="Kankys" />
+    <link rel="shortcut icon" href="obrazky/tux.png" />
+    <link type="text/css" rel="stylesheet" href="styly.css" />
+
+</head>
+
+<body>
+
+    <div id="flexbox">
+        <div id="menu">
+            <ul>
+                <img src="obrazky/tux.png" width="150" height="100" alt="linux">
+                <li>
+                    <strong><a href="index.html" class="tlacitko">Hlavní strana</a></strong>
+                </li>
+                <li><strong><a href="clanky.html" class="tlacitko">Články</a></strong></li>
+                <li><strong><a href="o-mne.html" class="tlacitko">O mně</a></strong></li>
+                <li><strong><a href="privaci-polici.html" class="tlacitko">Zásady ochrany osobních údaju</a></strong></li>
+
+            </ul>
+        </div>
+
+
+        <div id="obsah">
+            <strong>
+                <figure>
+
+                    <center>
+                        <figcaption>
+                            <h1>Lukáš Bloguje</h1><br>Blog o všem možném i nemožném....
+                        </figcaption>
+                    </center>
+                </figure>
+            </strong>
+            <!-- NADPIS CLANKU -->
+            <p><strong>
+                    <center>MSSQL Express na MacOS v Docker Desktop</center>
+                </strong></p>
+            <!-- TEXT CLANKU -->
+            <p>
+                Pokud chcete na MacOS používat MSSQL lokálně (localhost) zprovoznění je velmi jednoduché.
+            </p>
+            <p>
+
+                V první části si zprovozníme Docker Desktop.
+            </p>
+            <p>
+
+                Pak stáhneme a nastartujeme MSSQL Express.
+            </p>
+            <p>
+
+                A jako poslední stáhneme si Azure Data Studio, kde budeme moc pracovat s databázemi.
+
+            <p>
+
+                Přejdeme na web <a href="https://www.docker.com/products/docker-desktop/" target="_blank" class="tlacitko">Download Docker Desktop | Docker</a> kde si stáhneme Docker Desktop, buď verzi Intel nebo M1 dle vašeho zařízení (web by vám měl nabídnout danou verzi).<br>
+                Po stažení ji naistalujeme. V nastavení Dockeru pod položkou Resources –> Advenced doporučuji položku Swap: nastavit na 2 GB.<br>
+                To zatím v Dockeru bude vše.
+            </p>
+
+            <p>
+                Teď si do Dockeru stáhneme MSSQL Express kde ho následovně i spustíme.
+            </p>
+            <p>
+                Začneme stažením MSSQL Express 2019.
+            </p>
+            <p>
+                Do terminálu zadáme pro ty co májí zařízení s Intelem:
+            </p>
+            <p>
+                <strong>docker pull mcr.microsoft.com/mssql/server:2019-latest</strong>
+            </p>
+            <p>
+            <p>
+                A ti co mají M1 vloží do terminálu:
+            </p>
+            <p>
+                <strong>pull mcr.microsoft.com/azure-sql-edge</strong>
+            </p>
+            <p>
+                Tímto nastartujeme v docker mssql
+            </p>
+            <p>
+                <strong>docker run --name SqlServer -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=XXXXX' -p 1433:1433 -d mcr.microsoft.com/azure-sql-edge</strong>strong>
+            </p>
+            <p>
+                Zde je nutné nastavit dosti silné heslo. V ‚<strong>SA_PASSWORD=XXXXX</strong>strong>‘ XXXXX nahradíme dosti silným heslem. Mělo by mít aspoň osm znaků, velké a malé písmena, číslice a speciální znak (třeba) tečku.
+            </p>
+            <p>
+
+                Teď když se podíváte v měli by jste v aplikaci Docker Desktop vidět již nastartovaný proces sql. Tam ho můžete jak vypínat tak i zapínat.
+            </p>
+            <p>
+                Běžící procesy Dockeru si můžete prohlédnout i v terminálu pomocí tohoto příkazu:
+            </p>
+            <p>
+                <strong>docker ps</strong>
+            </p>
+            <p>
+
+                Teď si stáhneme Azura Data Studio, je to gui pro MSSQL od Microsoftu. MSSQL můžete používat třeba jen v terminálu nebo i v jiném programu. Osobně nejvíce používám Azure Data Studio a VS Code s pluginem mssql.
+            </p>
+            <p>
+
+                Zde si stáhneme <a href="https://learn.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16&tabs=redhat-install%2Credhat-uninstall#download-azure-data-studio" target="_blank" class="tlacitko">Azure Data Studio</a> , po stažení si ho nainstalujeme a nastavíme.
+            </p>
+            <p>
+
+                Klikneme na <strong>new Connections</strong>.
+            </p>
+            <p>
+                V <strong>Connection type</strong> vybere: <strong>Microsoft SQL Server</strong>
+            </p>
+            <p>
+                Do kolonky <strong>Server</strong> napíšeme: localhost
+            </p>
+            <p>
+                <strong>Authentication type: SQL Login</strong>
+            </p>
+            <p>
+
+                <strong>User name: sa</strong>
+            </p>
+            <p>
+                <strong>Password:</strong> vaše heslo co jste si nastavily při konfiguraci MSSQL výše.
+            </p>
+            <p>
+                Ještě si do Azure Data Studio stáhneme dva důležité pluginy. Klikneme na <strong>Extensions</strong> a vyhledáme plugin <strong>New Database</strong> a Delete Database.<br> Když na ně kliknete tak vás to odkáže na GitHub kde stáhnete soubor s koncovkou <strong>vsix</strong>. Plugin nainstaluje tím že klikneme v <strong>Extensions</strong> na tři tečky, <strong>Install from vsix</strong> a naistalujeme pluginy.
+            </p>
+            <p>
+                Tím máte vše nastaveno.
+            </p>
+            <p>
+                Pokud si budete chtít změnit heslo pro sa použijete tento příkaz:
+            </p>
+
+            <strong>docker exec -it SqlServer /opt/mssql-tools/bin/sqlcmd \ -S localhost -U SA -P '</strong>
+            <old-password><strong>' \ -Q 'ALTER LOGIN SA WITH PASSWORD="</strong>
+                <new-password>"'
+                    Pokud chcete MSSQL z dockeru odstranit tak do terminálu vložte:
+                    <p>
+                        <strong>docker stop SqlServer</strong>
+                    </p>
+                    <p>
+                        <strong>docker rm SqlServer</strong>
+                    </p>
+                    <p>
+                        Prvním příkazem zastavíte SQL a druhým jej odstraníte z Dockeru.
+                    </p>
+                    <p>
+                        Obraz disku MSSQL zůstane na vašem disku pokud ho chcete odstranit vložte do terminálu:
+                    </p>
+                    <p>
+                        docker rmi Image Image
+                    </p>
+                    <p>
+
+                        Pokud si ho tam necháte můžete ho použít příště bez stahování.
+                    </p>
+                    <p>
+                        <!-- Odkaz na štítky -->
+                        <li><strong><a href="stitky-it.html" class="tlacitko">IT</a></strong></li><br>
+                    </p>
+                    <!-- NEZAPOMENOUT UPRAVIT DATUM VYDANI -->
+                    <p style="text-align: right"> By Kankys <br>
+                        Posted on 28/02/2023</p>
+        </div>
+    </div>
+            
+
+
+    <footer>
+        Copyright &copy; Lukáš Kaňka 2023
+
+    </footer>
+
+</body>
+
+</html>

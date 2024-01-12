@@ -14,8 +14,6 @@ footer {
   max-width: auto;
   margin: auto;
 }
-@media screen and (max-width: 600px) {
-}
 
 .menu,
 .panel {
@@ -94,5 +92,38 @@ a.tlacitko:hover {
   .obsah {
     flex-direction: column;
     order: 1;
+  }
+}
+
+/* web s projekty */
+.flexbox-project {
+  flex-direction: column;
+}
+.h1pr {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .flexbox-projekt {
+    width: calc(100% - 16px);
+    flex-direction: column;
+    display: flex;
+  }
+  .h1pr {
+    text-align: center;
+  }
+  /* .dot.pr {
+    text-align: center;
+    color: red;
+  } */
+  .content-pr {
+    /* display: flex; */
+    text-align: center;
+    padding: auto;
+  }
+  .project {
+    /* display: flex; */
+    text-align: center;
+    padding: auto;
   }
 }

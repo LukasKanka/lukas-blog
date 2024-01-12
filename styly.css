@@ -14,9 +14,7 @@ footer {
   max-width: auto;
   margin: auto;
 }
-
-.flexbox div {
-  /*    background-color: ;*/
+@media screen and (max-width: 600px) {
 }
 
 .menu,
@@ -39,6 +37,12 @@ body {
   /* pozadí neroluje */
   /*background-color: black;  /* případná barva pozadí černá */
   /*color: white; } /* bílý text */
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    width: calc(100% - 16px);
+  }
 }
 /* <style> */
 a.tlacitko {
@@ -71,4 +75,24 @@ a.tlacitko:hover {
 /* </style> */
 .dot {
   list-style-type: none;
+}
+
+/* .menu {
+}
+
+.obsah {
+} */
+
+@media screen and (max-width: 600px) {
+  .flexbox {
+    width: calc(100% - 16px);
+    flex-direction: column;
+  }
+  .menu {
+    order: -1;
+  }
+  .obsah {
+    flex-direction: column;
+    order: 1;
+  }
 }

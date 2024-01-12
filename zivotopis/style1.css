@@ -11,6 +11,12 @@ body {
   margin: auto;
   margin-bottom: 25px;
 }
+@media screen and (max-width: 600px) {
+  body {
+    width: calc(100% - 16px);
+  }
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -31,12 +37,20 @@ th {
   max-width: auto;
   margin: auto;
 }
+.flexbox-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .menu {
-  flex: 1;
+  margin-top: 25px;
 }
 
 .content {
+  order: 2;
   flex: 3;
+  padding: 55px;
+  margin-top: -45px;
 }
 .dot {
   list-style-type: none;
@@ -45,4 +59,24 @@ th {
 .course,
 .fun {
   font-size: 20px;
+}
+.title {
+  text-align: center;
+  order: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .flexbox {
+    flex-direction: column;
+  }
+
+  .menu {
+    order: 1;
+  }
+  /* .content {
+    order: 3;
+  } */
+  .title {
+    order: -1;
+  }
 }

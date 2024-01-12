@@ -72,6 +72,10 @@ th {
 
   .menu {
     order: 1;
+    text-align: center;
+  }
+  .dot-none {
+    list-style-type: none;
   }
   /* .content {
     order: 3;

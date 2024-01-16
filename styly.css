@@ -1,6 +1,7 @@
 :root {
   --my-brown: brown;
   --my-red: red;
+  --my-black: black;
 }
 
 footer {
@@ -8,24 +9,8 @@ footer {
   bottom: 0;
 }
 
-/*flebox itn*/
-.flexbox {
-  display: flex;
-  max-width: auto;
-  margin: auto;
-}
-
-.menu,
-.panel {
-  flex: 1;
-}
-
-.obsah {
-  flex: 3;
-}
-
 body {
-  background-image: url(obrazky/white-21.jpg);
+  background-image: url(obrazky/005.jpg);
   background-size: 100%;
   max-width: 1200px;
   margin: auto;
@@ -40,8 +25,17 @@ body {
 @media screen and (max-width: 600px) {
   body {
     width: calc(100% - 16px);
+    background-image: url(obrazky/white-21.jpg);
   }
 }
+
+/*flebox*/
+.flexbox {
+  display: flex;
+  justify-content: flex-start;
+  gap: 45px;
+}
+
 /* <style> */
 a.tlacitko {
   /*border-bottom : 1px solid #D1D1D1;*/
@@ -75,23 +69,23 @@ a.tlacitko:hover {
   list-style-type: none;
 }
 
-/* .menu {
-}
-
-.obsah {
-} */
-
 @media screen and (max-width: 600px) {
   .flexbox {
-    width: calc(100% - 16px);
     flex-direction: column;
   }
   .menu {
     order: -1;
   }
-  .obsah {
-    flex-direction: column;
+
+  .text-obsah {
     order: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .clock {
+    display: flex;
+    display: none;
   }
 }
 

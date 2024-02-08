@@ -137,3 +137,11 @@ a.tlacitko:hover {
   text-align: center;
   border-radius: 50px;
 }
+
+/* Zvětšení písma */
+.tlacitko {
+  transition: font-size 0.3s ease;
+}
+.tlacitko:hover {
+  font-size: 20px;
+}

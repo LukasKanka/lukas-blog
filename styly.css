@@ -145,3 +145,11 @@ a.tlacitko:hover {
 .tlacitko:hover {
   font-size: 20px;
 }
+
+p {
+  transition: color 0.3s ease;
+}
+
+p:hover {
+  color: var(--my-brown);
+}
